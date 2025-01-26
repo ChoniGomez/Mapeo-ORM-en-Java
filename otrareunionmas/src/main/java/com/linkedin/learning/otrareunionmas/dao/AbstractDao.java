@@ -20,6 +20,10 @@ public abstract class AbstractDao<T> implements Dao<T> {
 		return Optional.ofNullable(entityManager.find(clazz, id));
 	}
 
+	public EntityManager getEntityManager() {
+		return entityManager;
+	}
+
 	@Override
     public List<T> getAll() {
         String qlString = "FROM " + clazz.getName();
