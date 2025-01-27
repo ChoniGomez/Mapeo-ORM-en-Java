@@ -7,7 +7,7 @@ import java.util.Optional;
 //la <T> es para tratar distintos tipos de datos
 public interface Dao<T> {
 
-	Optional<T> get(long id);
+	Optional<T> get(int id);
 
 	List<T> getAll();
 
